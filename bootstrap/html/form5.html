@@ -17,8 +17,8 @@
                       <p style="border:1px solid black; width: 1000px; padding : px ;border:1px solid black; width: 1299px; padding : 1px ; border-top: none; border-left: none; background-color:antiquewhite; ">Ingreso de registro </p>
                  </div>  
             </div>
-            
-            <div class="chung" style="border:1px solid black;  padding:1px; margin: 10px; ">
+            <!---->
+            <div class="chung" style="border:1px solid black;  padding:1px; margin: 10px;margin-bottom:20px ; ">
                 <div class="row">
                     <div class="col-md-3">
                         <p style="border:1px solid black;border:1px solid black; width: 1275px; padding : 1px ; border-top: none; border-left: none; border-right: none;background-color: rgb(218, 211, 211); ">Datos de registro </p>
@@ -26,35 +26,35 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6" style="padding-left :50px ;">
-                        <label class="control-label" for="Tên" style="color:red ;margin-left:0px ; ">
+                        <label class="control-label" for="Tên" style="color:red ;margin-left:50px ;text-align: right; ">
                              Tên
                         </label>
-                        <input type="text" name="run" value="" style="width: 500px;" >
+                        <input type="text" name="run" value="" style="width: 500px; height: 35px;" >
                     </div>
                     <div class="col-md-6">
                         <label class="control-label" for="Họ và tên" style="color:red; margin-left: 4px  ; " >
                           Họ và tên
                         </label>
-                        <input type="text" name="Nombre Completo" value=""  style="width:500px">
+                        <input type="text" name="Nombre Completo" value=""  style="width:502px;height: 30px;">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6" style="padding-left :50px ; ">
-                        <label class="control-label" for="Ngày Sinh"style="color:red; ">
+                        <label class="control-label" for="Ngày Sinh"style="color:red;margin-top:17px ;">
                             Ngày sinh
                         </label>
-                        <div class="input-group" style="width:530px; border: 1px solid black;">
+                        <div class="input-group" style="width:500px; position:absolute; left: 130px;top:15px ;">
                             <div class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></div>
                             <input id="calendar" type="text" class="form-control" name="calendar" placeholder="dd-mm-aaaa">
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <label class="control-label " for="email" style="color:red; margin-left: 4px;">
+                        <label class="control-label " for="email" style="color:red; margin-left: 25px; margin-top: 20px;">
                              Email
                         </label>
-                        <div class="input-group" style="border:1px solid black; width:500px">
+                        <div class="input-group" style=" width:450px; position:absolute; left:87px;top:15px">
                             <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
-                            <input id="calendar" type="text" class="form-control" name="calendar" placeholder="dd-mm-aaaa" style="width:535px; ">
+                            <input id="calendar" type="text" class="form-control" name="calendar" placeholder="dd-mm-aaaa" style="width:465px; ">
                         </div>
                     </div>
                 </div>
@@ -62,10 +62,10 @@
                 <div class="row">
 
                     <div class="col-md-6"style="padding-left :50px ;" >
-                        <label class="control-label" for="Điện thoại"style="color:red">
+                        <label class="control-label" for="Điện thoại"style="color:red;margin-top:20px;  ">
                           Điện thoại
                         </label>
-                        <div class="input-group" style="width:530px; border:1px solid black">
+                        <div class="input-group" style="width:500px;  position: absolute;left:130px; top:15px">
                             <div class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></div>
                             <input id="calendar" type="text" class="form-control" name="calendar" placeholder="dd-mm-aaaa">
                         </div>
@@ -73,19 +73,19 @@
                     </div>
 
                     <div class="col-md-6">
-                        <label class="control-label " for="Địa chỉ" style="color:red; margin-left: 6px; ">
+                        <label class="control-label " for="Địa chỉ" style="color:red; margin-left: 20px;  ">
                                 Địa chỉ
                         </label>
-                        <input type="text" name="email" value="" style="margin-top:20px ;width:515px; height: 30px;">
+                        <input type="text" name="email" value="" style="margin-top:20px ;width:505px; height: 35px;">
                     </div>
                 </div>
                 <div class="row">
 
                     <div class="col-md-6"style="padding-left :100px ;" >
-                        <label class="control-label" for="Tỉnh"style="color:red;margin-left:-50px;margin-top:10px;">
+                        <label class="control-label" for="Tỉnh"style="color:red;margin-left:-5px;margin-top:10px;">
                             Tỉnh
                         </label>
-                        <select name="Thành Phố" style="width:495px;height: 30px; margin-top: 20px;" >
+                        <select name="Thành Phố" style="width:500px;height: 35px; margin-top: 20px;" >
                             <option value="Binh Định">Bình Định</option>
                             <option value="Quảng Ngãi">Quảng Ngãi</option>
                             <option value="Quảng Nam">Quảng Nam</option>
@@ -97,10 +97,10 @@
                     </div>
 
                     <div class="col-md-6">
-                        <label class="control-label " for="Cumuma" style="color:red; margin-left:5px ;">
+                        <label class="control-label " for="Cumuma" style="color:red; margin-left:23px ;">
                             Huyện
                         </label>
-                        <select name="Huyện" style="margin-top:20px ; height: 30px;margin-bottom:20px ;" >
+                        <select name="Huyện" style="margin-top:20px ; height: 35px;width:505px ; margin-bottom:20px ;" >
                               <option value="Vĩnh Thạnh">Vĩnh Thạnh</option>
                               <option value="Tây Sơn">Tây Sơn</option>
                               <option value="Thị Xã An Nhơn">Thị Xã An Nhơn</option>
@@ -116,10 +116,10 @@
                 <div class="row">
 
                     <div class="col-md-12"style="padding-left :100px ; padding-bottom:20px;" >
-                        <label class="control-label" for="Auto"style="color:red;margin-left:-50px">
+                        <label class="control-label" for="Auto"style="color:red;margin-left:-10px">
                             Auto
                         </label>
-                        <select name="Auto" style="width:1170px ; margin-top: 20px; height:30px ;">
+                        <select name="Auto" style="width:1150px ; margin-top: 5px; height:35px ;">
                             <option value="XXXX-15">XXXX-15</option>
                             <option value="XXXX-14">XXXX-14</option>
                             <option value="XXXX-13">XXXX-13</option>
