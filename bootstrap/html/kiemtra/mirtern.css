@@ -14,4 +14,24 @@
   background:rgb(241, 46, 79) ;
 }
 
-
+/*img {
+  -webkit-transition:all 0.5s ease-out;
+  -moz-transition:all 0.5s ease-out;
+  -ms-transition:all 0.5s ease-out;
+  -o-transition:all 0.5s ease-out;
+  transition:all 0.5s ease-out;
+  }
+img:hover {
+  -webkit-transform:rotate(360deg);
+  -moz-transform:rotate(360deg);
+  -ms-transform:rotate(360deg);
+  -o-transform:rotate(360deg);
+  transform:rotate(360deg);
+  }*/
+  img {
+    transform: scale(1);
+    transition: all 0.s;
+    }
+    img:hover {
+    transform: scale(1.1);
+    }
