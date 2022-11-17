@@ -30,8 +30,8 @@ img:hover {
   }*/
   img {
     transform: scale(1);
-    transition: all 0.s;
+    transition: all 0.1s;
     }
-    img:hover {
+  img:hover {
     transform: scale(1.1);
     }
