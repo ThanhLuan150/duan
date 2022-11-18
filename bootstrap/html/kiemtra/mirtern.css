@@ -6,6 +6,13 @@
     font-family: 'Roboto', sans-serif;
 
 }
+/*.banners{
+  position: fixed;
+  display: block;
+  z-index: 1;
+  background-color: rgb(252, 244, 245);
+  width: 1600px;
+}*/
 
 .col-md-3 :hover{
   color: rgb(241, 46, 79);
