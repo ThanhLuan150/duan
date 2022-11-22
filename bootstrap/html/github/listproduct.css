@@ -54,3 +54,8 @@
     margin-right: 40px;
 }
 
+
+
+.product_view :hover{
+    background-color: azure;
+}
