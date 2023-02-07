@@ -268,7 +268,8 @@ for (let i=0; i<= phongtieuchuangiuongdon.length-1; i++){
     demo +='<div class="card-body">';
     demo +='<h5 class="card-title">'+phongtieuchuangiuongdon[i].name+'</h5>';
     demo +='<p class="card-text">'+phongtieuchuangiuongdon[i].price+'</p>';
-    demo +='<a href="#"class="btn btn-primary" onclick="oder()">Đặt mua</a>';
+    demo +='<a href="http://127.0.0.1:5500/older.html"class="btn btn-primary" onclick="oder()">Đặt mua</a>';
+    demo +='<a href="#"class="btn btn-primary" style="margin-left:60px;" >Chi tiết</a>';
     demo +='</div>';
     demo +='</div>';
     demo +='</div>';
@@ -307,7 +308,40 @@ for (let i=0; i<= chungcuhainguoingu.length-1; i++){
 }
 localStorage.setItem("Man",JSON.stringify(phongtieuchuangiuongdon));
 localStorage.setItem("Woman",JSON.stringify(phongdondexuve));
-localStorage.setItem("Man",JSON.stringify(chungcuhainguoingu));
+localStorage.setItem("mmmm",JSON.stringify(chungcuhainguoingu));
 function search(){
     
+}
+
+function changeProductList(type, element) //type là tham số truyền vào để có thể hiểu được khi nào nhấn vào cái này cái kia
+//element để có hiểu rằng kaf mình đã lấy ra được đối tượng nào ra .
+{   
+    let tabs =document.getElementsByClassName('tab-item');
+    // duyệt các mảng này
+    for (i=0; i < tabs.length; i++){
+            tabs[i].style.background ='#3F7BFE';
+            // background gán váo background ban đầu
+    }
+
+    element.style.background='#344583'
+
+    document.getElementById(type).style.display ='flex';
+    switch (type) {
+        case 'men':
+            document.getElementById('woment').style.display="none";
+            document.getElementById('mmmm').style.display="none";
+            break;
+        case 'woment':
+            document.getElementById('men').style.display="none";
+            document.getElementById('mmmm').style.display="bnone";
+            break;
+        case 'mmmm':
+            document.getElementById('men').style.display="none";
+            document.getElementById('woment').style.display="none";
+            break;
+        
+    }
+    console.log(tabs);
+    //console.log(type);
+
 }

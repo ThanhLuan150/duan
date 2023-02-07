@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="../locsanpham/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Danh sách sản phẩm</h1>
+        <ul class="tab">
+            <li class="tab-item active" onclick="changeProductList('trend' ,this)"> Phổ biến</li>
+            <li class="tab-item" onclick="changeProductList('new', this)"> Mới nhất</li>
+            <li class="tab-item"onclick="changeProductList('best-sell', this)"> Bán chạy</li>
+        </ul>
+
+        <div id="trend" class="animation">
+            <ul class="product-list">
+                <li><img src="./anh/4.jpg" alt="" style="width: 220px;height:200px"></li>
+                <li><img src="./anh/9.jpg" alt="" style="width:220px;height:200px"></li>
+                <li><img src="./anh/8.jpg" alt="" style="width:220px;height:200px"></li>
+                <li><img src="./anh/7.jpg" alt="" style="width:220px;height:200px"></li>
+                <li><img src="./anh/6.jpg" alt="" style="width:220px;height:200px"></li>
+                <li><img src="./anh/5.jpg" alt="" style="width:220px;height:200px"></li>
+            </ul>
+        </div>
+        <div id="new" class="animation">
+            <ul class="product-list">
+                <li><img src="./anh/10.jpg" alt="" style="width: 220px;height:200px"></li>
+                <li><img src="./anh/10.jpg" alt="" style="width:220px;height:200px"></li>
+                <li><img src="./anh/10.jpg" alt="" style="width:220px;height:200px"></li>
+                <li><img src="./anh/10.jpg" alt="" style="width:220px;height:200px"></li>
+                <li><img src="./anh/10.jpg" alt="" style="width:220px;height:200px"></li>
+                <li><img src="./anh/10.jpg" alt="" style="width:220px;height:200px"></li>
+            </ul>
+        </div>
+        <div id="best-sell" class="animation">
+            <ul class="product-list">
+                <li><img src="./anh/9.jpg" alt="" style="width: 220px;height:200px"></li>
+                <li><img src="./anh/9.jpg" alt="" style="width:220px;height:200px"></li>
+                <li><img src="./anh/8.jpg" alt="" style="width:220px;height:200px"></li>
+                <li><img src="./anh/7.jpg" alt="" style="width:220px;height:200px"></li>
+                <li><img src="./anh/5.jpg" alt="" style="width:220px;height:200px"></li>
+                <li><img src="./anh/4.jpg" alt="" style="width:220px;height:200px"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
