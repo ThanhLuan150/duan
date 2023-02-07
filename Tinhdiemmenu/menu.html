@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồ uống bao ngon- bổ rẻ</title>
+</head>
+<style>
+    body{
+        border: 1px solid white;
+        width: 710px;
+        margin-left: 350px;
+      
+    }
+    .form_menu{
+        border: 5px solid gray;
+        width: 500px;
+        height: 350px;
+        text-align: center;
+        margin-left: 200px;
+       position: absolute;
+       bottom: 350px;
+       background-color: aquamarine;
+    }
+    
+    h2{
+        color: red;
+        text-align: center;
+    }
+    p{
+        color:red;
+        text-align: center;
+    }
+    select{
+        text-align: center;
+    }
+    option{
+        border: 1px solid black;
+        background-color:green;
+    }
+    #nuoc{
+        color: red;
+    }
+    #traicay{
+        color:red;
+    }
+</style>
+<body>
+    <table class="table1" border="1">
+        <tr>
+            <th>Tên nước uống</th>
+            <th>Giá</th>
+        </tr>
+        <tr>
+            <td>Coca Cola </td>
+            <td>17000</td>
+        </tr>
+        <tr>
+            <td>7 up </td>
+            <td>17000</td>
+        </tr>
+        <tr>
+            <td>Pessi </td>
+            <td>17000</td>
+        </tr>
+        <tr>
+            <td>Cam ép </td>
+            <td>17000</td>
+        </tr>
+        <tr>
+            <td>Sting </td>
+            <td>17000</td>
+        </tr>
+        <tr>
+            <td>Bò húc </td>
+            <td>20000</td>
+        </tr>
+    </table>
+    <br> <br> <br> <br>
+    <table border="1">
+        <tr>
+            <th>Tên trái cây</th>
+            <th>Gía </th>
+        </tr>
+        <tr>
+            <td>Trái cây nhỏ </td>
+            <td>99000</td>
+        </tr>
+        <tr>
+            <td>Trái cây lớn </td>
+            <td>129000</td>
+        </tr>
+        <tr>
+            <td>Bưởi</td>
+            <td>189000</td>
+        </tr>
+    </table>
+    <form  class="form_menu">
+        <h2>NƯỚC NGỌT VÀ TRÁI CÂY SIÊU TO KHỔNG LỒ</h2>
+        <p>Vui lòng lựa chọn</p>
+        Nước ngọt: 
+        <select id="nuoc" >
+            <option value="1">Nước suối</option>
+            <option value="2">Coca Cola</option>
+            <option value="3">7 up</option>
+            <option value="4">Pessi</option>
+            <option value="5">Cam ép</option>
+            <option value="6">Sting</option>
+            <option value="7">Bò húc</option>
+        </select>
+        Trái cây:
+        <select id="traicay">
+            <option value="1">Trái cây nhỏ</option>
+            <option value="2">Trái cây lớn</option>
+            <option value="3">Bưởi</option>
+        </select>
+        <br> <br>
+        Nhập tiền:
+        <input type="text" id="s1" value="0"><br><br>
+
+        
+        Summary:
+        <p id="sum"></p>
+        <input type="button" onclick="functionok()" value="OK">
+        <input type="button" onclick="functioncancle()" value="Cancle">
+    </form>
+    <script>
+        function functionok(){
+            var nhaptien =parseInt(document.getElementById("s1").value);
+            //lây giá trị của từng option trong select
+            var a = document.getElementById("nuoc");
+            var value = a[a.selectedIndex].value;
+            //lây giá trị của từng option trong select
+            var b= document.getElementById("traicay");
+            var value1= b[b.selectedIndex].value;
+            var result;
+            var result1;
+            var result2;
+            if (value == 1){
+                result =(nhaptien-15000);
+                result1="Nước suối"
+            }
+            else if (value==2){
+                result =(nhaptien -17000);
+                result1="Coca Cola"
+            }
+            else if (value==3){
+                result =(nhaptien -17000);
+                result1="7 up"
+            }
+            else if (value==4){
+                result =(nhaptien -17000);
+                result1="Pessi"
+            }
+            else if (value==5){
+                result =(nhaptien -17000);
+                result1="Cam ép"
+            }
+            else if (value==6){
+                result =(nhaptien -17000);
+                result1="Sting"
+            }
+            else if (value==7){
+                result =(nhaptien -20000);
+                result1="Bò húc"
+            }
+            if(value1==1){
+                result=(result-99000);
+                result2="Trái cây nhỏ"
+            }
+            if(value1==2){
+                result=(result-129000);
+                result2="Trái cây lớn"
+            }
+            if(value1==3){
+                result=(result-189000);
+                result2="Bưởi"
+            }
+            if(result<0){
+                alert("xin lỗi bạn không đủ tiền mua sản phẩm")
+            }
+            else{
+                document.getElementById("sum").innerHTML= (" Sản phẩm bạn mua là:  "+ result1 + ", "+ result2 +", tổng tiền là: "+ (nhaptien-result) + " ; tiền thừa : " + result);}
+            } if (value !=0 && value1==0){
+                if (value==1){
+                        result=(nhaptien - 15000);
+                        result1="NƯỚC SUỐI"
+                }
+                }
+                else if (value==2){
+                    result=(nhaptien-17000);
+                    result1="Coca Cola"
+                }
+                else if (value==3){
+                    result=(nhaptien-17000);
+                    result1="7 up"
+                }
+                else if (value==4){
+                    result=(nhaptien-17000);
+                    result1="Pessi"
+                }
+                else if (value==5){
+                    result=(nhaptien-17000);
+                    result1="Cam ép"
+                }
+                else if (value==6){
+                    result=(nhaptien-17000);
+                    result1="Sting"
+                }
+                
+                else if (value==7){
+                    result=(nhaptien-20000);
+                    result1="BÒ HÚC"
+                }
+                if(result<0){
+                    alert("xin lỗi bạn không đủ tiền mua sản phẩm")
+                }
+                else{
+                    document.getElementById("sum").innerHTML= (" Sản phẩm bạn mua là:  "+ result1 + ", " +", tổng tiền là: "+ (nhaptien-result) + " ; tiền thừa : " + result);
+
+                }
+            
+            if (value1!=0 && value==0 ){
+                if(value1==1){
+                    result=(nhaptien-99000);
+                    result2="Trái cây nhỏ"
+                }
+                if(value1==2){
+                    result=(nhaptien-129000);
+                    result2="Trái cây lớn"
+                }
+                if(value1==3){
+                    result=(nhaptien-189000);
+                    result2="Bưởi năm roi"
+                }
+                if(result<0){
+                    alert("xin lỗi bạn không đủ tiền mua sản phẩm")
+                }
+            else{
+                document.getElementById("sum").innerHTML= (" Sản phẩm bạn mua là:  "+ result2 + ", " +", tổng tiền là: "+ (nhaptien-result) + " ; tiền thừa : " + result);
+
+            }
+            }
+
+            function functioncancle(){
+                document.getElementById("s1").value="0";
+                document.getElementById("sum").innerHTML="";
+            }
+    </script>
+</body>
+</html>
