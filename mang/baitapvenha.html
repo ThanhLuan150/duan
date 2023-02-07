@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding:0;
+    }
+    .header{
+        height: 50px;
+    }
+    .text{
+        color: red;
+        margin-top: 13px;
+    }
+    .intro{
+        height: 700px;
+    }
+    form{
+        border:1px solid black;
+        background-color: #008080;
+        width: 800px;
+        margin-left: 340px;
+        height: 550px;
+    
+    }
+    .label1{
+        color:#111111;
+        margin-left: 20px;
+    }
+    .form-control{
+        margin-left: 20px;
+        width: 300px;
+        height: 35px;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    .btn1{
+        height: 30px;
+        width: 50px;
+        border: 1px solid whitesmoke;
+        margin-left: 20px;
+        color:red;
+    }
+    .btn2{
+        height: 30px;
+        width: 50px;
+        border: 1px solid whitesmoke;
+        margin-left: 20px;
+        color:red;
+    }
+    .table{
+        background-color: aqua;
+        border:2px solid white;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+            <marquee class="text" scollamount=""4>
+                Hello idol of our team! We are really Love you so much. Thanks a lot when have problem, you always beside us and he 
+            </marquee>
+        </div>
+        <div class="intro">
+            <form  >
+                <label class="label1"> Fullname_Customer</label>
+                <br><br>
+                <input class="form-control" type="text" name="Fullname_Customer" value="" id="full_n" onkeypress="return isCharacterKey(event)" required>
+                <br> <br>
+                <label class="label1">Id_Pro </label>
+                <br><br>
+                <input class="form-control"type="text" name="Id_Pro" value="" id="i_pr" onkeypress="return isNumberKey(event)" required>
+                <br><br>
+                <label class="label1">Name_Pro</label>
+                <br> <br>
+                <input class="form-control"type="text" name="Name_Pro" value="" id="na_pr" required>
+                <br> <br>
+                <label class="label1">Quantity_Pro</label>
+                <br><br>
+                <input class="form-control"type="text" name="Quantity_Pro" value="" id="qu_pr" onkeypress="return isNumberKey(event)" required>
+                <br><br>
+                <label class="label1">Price_Pro</label>
+                <br><br>
+                <input class="form-control"type="text" name="Price_Pro" value="" id="pr_pr" onkeypress="return isNumberKey(event)"required>
+                <br> <br>
+                <input class="btn1" type="button" name="Save" value="Save" onclick="save()" >
+                <input class="btn2" type="button" name="Show" value="Show" onclick="show()" >
+                <input class="btn2"type="button" name="Reset" value="Reset"  onclick="reset()">
+            </form>
+            <br><br>
+            <table border="3" id="tbl">
+                <tr>
+                    <th>Auto_Increment</th>
+                    <th>Fullname_Customer</th>
+                    <th>Id_Pro</th>
+                    <th>Name_Pro</th>
+                    <th>Quantity_Pro</th>
+                    <th>Price_Pro</th>
+                    <th>Discount</th>
+                    <th>Amount</th>
+                    <th>Total</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        var arrays=[];
+        function save(){
+            var a={
+                fname: document.getElementById("full_n").value,
+                id: document.getElementById("i_pr").value,
+                name: document.getElementById("na_pr").value,
+                quantity: document.getElementById("qu_pr").value,
+                price: document.getElementById("pr_pr").value,
+            }
+            console.log(a);
+            arrays.push(a);
+            localStorage.setItem("huhu",JSON.stringify(arrays));
+        }
+        function show(){
+            for ( i in arrays){
+                var n = i;
+                n++;
+                var data = "<tr>";
+                data += "<td>" + arrays[i].fname + "</td>";
+                data += "<td>" + arrays[i].id + "</td>";
+                data += "<td>" + arrays[i].name + "</td>";
+                data += "<td>" + arrays[i].quantity + "</td>";
+                data += "<td>" + arrays[i].price + "</td>";
+                data += "<td>" + ((arrays[i].quantity*arrays[i].price)*0.15) + "</td>";
+                data += "<td>" + (arrays[i].quantity*arrays[i].price) + "</td>";
+                data += "<td>" + ((arrays[i].quantity*arrays[i].price)-((arrays[i].quantity*arrays[i].price)*0.15)) + "</td>";
+                data +="</tr>";
+            }
+            document.getElementById("tbl").innerHTML +=data;
+        }
+        function reset(){
+            document.getElementById("full_n").innerHTML="";
+            document.getElementById("i_pr").innerHTML="";
+            document.getElementById("na_pr").innerHTML="";
+            document.getElementById("qu_pr").innerHTML="";
+            document.getElementById("pr_pr").innerHTML="";
+        }
+       
+       
+    </script>
+</body>
+</html>
